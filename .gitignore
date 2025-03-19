@@ -1,0 +1,15 @@
+.git/objects/pack/
+cicids_env/lib/python3.10/site-packages/tensorflow/libtensorflow_framework.so.2
+cicids_env/lib/python3.10/site-packages/tensorflow/libtensorflow_cc.so.2
+cicids_env/lib/python3.10/site-packages/llvmlite/binding/libllvmlite.so
+cicids_env/lib/python3.10/site-packages/clang/native/libclang.so
+data/ids_data_combined.csv
+data/ids_data_combined.xlsx
+data/processed_ids_data.csv
+cicids_env/lib/python3.10/site-packages/tensorflow/libtensorflow_framework.so.2
+cicids_env/lib/python3.10/site-packages/tensorflow/libtensorflow_cc.so.2
+cicids_env/lib/python3.10/site-packages/llvmlite/binding/libllvmlite.so
+cicids_env/lib/python3.10/site-packages/clang/native/libclang.so
+data/ids_data_combined.csv
+data/ids_data_combined.xlsx
+data/processed_ids_data.csv
