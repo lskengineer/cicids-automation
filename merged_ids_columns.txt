@@ -1,0 +1,14 @@
+protocol
+duration
+packets_count
+total_payload_bytes
+fwd_total_payload_bytes
+bwd_total_payload_bytes
+fwd_avg_segment_size
+bwd_avg_segment_size
+packets_rate
+subflow_fwd_packets
+subflow_bwd_packets
+subflow_fwd_bytes
+subflow_bwd_bytes
+label
