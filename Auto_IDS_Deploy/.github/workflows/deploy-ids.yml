@@ -1,0 +1,39 @@
+name: Deploy IDS
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y docker.io mongodb tcpreplay python3-pip
+          sudo systemctl enable --now mongodb
+
+      - name: Install Python Dependencies
+        run: |
+          pip3 install --upgrade pip
+          pip3 install -r requirements.txt
+
+      - name: Deploy IDS using Docker
+        run: |
+          cd docker
+          docker-compose up -d --build
+
+      - name: Start Traffic Replay
+        run: |
+          sudo tcpreplay --intf1=eth0 /home/ubuntu/pcaps/Wednesday-WorkingHours.pcap
+
+      - name: Start Dashboard
+        run: |
+          cd dashboard
+          python3 app.py
+

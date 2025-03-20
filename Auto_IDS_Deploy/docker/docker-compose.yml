@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ids-app:
+    build: .
+    container_name: ids_model
+    restart: always
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017
+    ports:
+      - "8050:8050"
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
